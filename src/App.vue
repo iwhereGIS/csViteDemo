@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import index from './index.vue'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 </script>
 
 <template>
-  <index />
+  <ElConfigProvider :locale="zhCn" >
+    <RouterView />
+  </ElConfigProvider>
 </template>
