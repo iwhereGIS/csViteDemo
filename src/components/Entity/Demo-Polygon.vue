@@ -5,8 +5,6 @@ import { Color, Entity, Viewer } from "cesium";
 
 import {CsViewer, CsEntityPolygon } from "@iw/cesium-ui";
 
-
-
 /**
  * Viewer 加载完成处理
  */

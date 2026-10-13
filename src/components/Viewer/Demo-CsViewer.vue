@@ -5,9 +5,13 @@ import { ref } from 'vue'
 // import heroImg from '../assets/hero.png'
 // import vueLogo from '../assets/vue.svg'
 
-import { Viewer } from "cesium";
+import { Viewer, Cartesian3, Color, GeoJsonDataSource } from "cesium";
 
-import { CsViewer } from "@iw/cesium-ui";
+import { CsViewer, useCsGlobalConfig } from "@iw/cesium-ui";
+
+// 按 key 取全局配置,返回 Ref<number | undefined>,避免对 Ref 对象直接解构得到 undefined
+const lng = useCsGlobalConfig('lng');
+const lat = useCsGlobalConfig('lat');
 
 /**
  * Viewer 加载完成处理
@@ -15,6 +19,20 @@ import { CsViewer } from "@iw/cesium-ui";
 
 function handleReady(viewer: Viewer){
   console.log('viewer ready', viewer)
+
+  viewer.entities.add({
+    position: Cartesian3.fromDegrees(lng.value!, lat.value!),
+    point: {
+      pixelSize: 10,
+      color: Color.YELLOW,
+    },
+  });
+
+  const promise = GeoJsonDataSource.load("./simplestyles.geojson");
+  promise.then((dataSource) => {
+    viewer.dataSources.add(dataSource);
+    viewer.zoomTo(dataSource);
+  });
 }
 
 function changeTest() {

@@ -3,7 +3,7 @@ import {nextTick, onMounted, ref} from 'vue'
 
 import { Entity, Viewer } from "cesium";
 
-import {CsViewer, useCsGlobalSettings } from "@iw/cesium-ui";
+import {CsViewer, useCsGlobalConfig } from "@iw/cesium-ui";
 
 
 
@@ -33,9 +33,11 @@ const isShow = ref(false)
 const initPos = ref<Array<number|undefined>>([])
 onMounted(() => {
   isShow.value = false
-  const { lng, lat } = useCsGlobalSettings()
-  if(lng && lat) {
-    initPos.value = [lng, lat]
+  // 按 key 取全局配置,返回 Ref<number | undefined>
+  const lng = useCsGlobalConfig('lng')
+  const lat = useCsGlobalConfig('lat')
+  if(lng.value && lat.value) {
+    initPos.value = [lng.value, lat.value]
     nextTick(()=>{
       isShow.value = true
     })

@@ -5,7 +5,6 @@ import { Viewer } from "cesium";
 
 import {CsViewer, CsEntityBillboard } from "@iw/cesium-ui";
 
-
 /**
  * Viewer 加载完成处理
  */

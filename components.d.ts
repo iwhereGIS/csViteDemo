@@ -11,6 +11,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AsyncError: typeof import('./src/components/Ui/AsyncError.vue')['default']
+    AsyncLoading: typeof import('./src/components/Ui/AsyncLoading.vue')['default']
     Billboard: typeof import('./src/components/Entity/billboard/billboard.vue')['default']
     Billboardslot: typeof import('./src/components/Entity/billboard/billboardslot.vue')['default']
     Collection: typeof import('./src/components/Primitive/collection.vue')['default']
@@ -70,6 +72,8 @@ declare module 'vue' {
     Point: typeof import('./src/components/Entity/point.vue')['default']
     Polygon: typeof import('./src/components/Entity/polygon.vue')['default']
     Polyline: typeof import('./src/components/Entity/polyline.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     VrCsViewer: typeof import('./src/components/Viewer/vrCsViewer.vue')['default']
     Wall: typeof import('./src/components/Entity/wall.vue')['default']
   }

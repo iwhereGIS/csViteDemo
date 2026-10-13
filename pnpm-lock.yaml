@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@iw/cesium-ui':
-        specifier: 1.4.1
-        version: 1.4.1(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)(typescript@5.9.3)
+        specifier: 1.13.1
+        version: 1.13.1(@turf/turf@7.3.4)(@vue/shared@3.5.31)(@vueuse/core@13.9.0(vue@3.5.31(typescript@5.9.3)))(cesium@1.139.1)(csstype@3.2.3)(element-plus@2.13.6(typescript@5.9.3)(vue@3.5.31(typescript@5.9.3)))(lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23))(vue-component-type-helpers@3.2.6)(vue@3.5.31(typescript@5.9.3))
       cesium:
         specifier: ^1.139.1
         version: 1.139.1
@@ -109,11 +109,24 @@ packages:
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
 
-  '@iw/cesium-ui@1.4.1':
-    resolution: {integrity: sha512-wLikKMJwZ4aEeVhh1WUCNAyGJj+1aEt1MYhaMT/LrYZp2pBeVFoGWxL605HtC9ADDcWcFx7VqT7J523jfbLTAQ==}
+  '@iw/cesium-ui@1.13.1':
+    resolution: {integrity: sha512-FtVb+PQoJyKBvBtZ8vXpnH+sJTC5stQ0gx6xmNtWJgLZEbcHvqc9GNJo/Vx5c2153ZUvehbNp3YR2GcI2PFIxg==}
+    peerDependencies:
+      '@turf/turf': ^7.3.1
+      '@vue/shared': ^3.2.37
+      cesium: ^1.144.0
+      element-plus: ^2.14.1
+      vue: ^3.5.34
 
-  '@iw/element-plus-utils@1.0.1':
-    resolution: {integrity: sha512-f0z+md66xcaTnBEzwIy0KWYDuJl1USseOQJQadUgmE1NJlq4dhIsZ50G2m1dtdk9lfkPdfUdEq0WRmE+TRlXDA==}
+  '@iw/utils@1.2.0':
+    resolution: {integrity: sha512-R7zy+sn0DKvml7MTR6/JLwQQGSqLBGJO/G/ow9q2ke8xy4zx4THt8lIWghhlbrB1hWbqYcZTd7sigxlG6Re/5g==}
+    peerDependencies:
+      '@vue/shared': ^3.5.43
+      '@vueuse/core': ^14.4.0
+      csstype: ^3.2.3
+      lodash-unified: ^1.0.3
+      vue: ^3.5.40
+      vue-component-type-helpers: ^3.2.8
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -947,6 +960,9 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
+  intersecting-polygon-detector@1.0.6:
+    resolution: {integrity: sha512-iEOOGsHAgiIbUnSW6psfDDpyjZts0eUuBZN9wYFNHb5dG16o83FKSqzieoZaKPVxDzcn2gfVhYW2vbWql7JHQg==}
+
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
@@ -1470,31 +1486,30 @@ snapshots:
 
   '@floating-ui/utils@0.2.11': {}
 
-  '@iw/cesium-ui@1.4.1(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)(typescript@5.9.3)':
+  '@iw/cesium-ui@1.13.1(@turf/turf@7.3.4)(@vue/shared@3.5.31)(@vueuse/core@13.9.0(vue@3.5.31(typescript@5.9.3)))(cesium@1.139.1)(csstype@3.2.3)(element-plus@2.13.6(typescript@5.9.3)(vue@3.5.31(typescript@5.9.3)))(lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23))(vue-component-type-helpers@3.2.6)(vue@3.5.31(typescript@5.9.3))':
     dependencies:
-      '@iw/element-plus-utils': 1.0.1(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)(typescript@5.9.3)
+      '@iw/utils': 1.2.0(@vue/shared@3.5.31)(@vueuse/core@13.9.0(vue@3.5.31(typescript@5.9.3)))(csstype@3.2.3)(lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23))(vue-component-type-helpers@3.2.6)(vue@3.5.31(typescript@5.9.3))
       '@turf/turf': 7.3.4
       '@vue/shared': 3.5.31
       cesium: 1.139.1
       color: 5.0.3
       element-plus: 2.13.6(typescript@5.9.3)(vue@3.5.31(typescript@5.9.3))
+      intersecting-polygon-detector: 1.0.6
       vue: 3.5.31(typescript@5.9.3)
     transitivePeerDependencies:
-      - '@types/lodash-es'
-      - lodash
-      - lodash-es
-      - typescript
+      - '@vueuse/core'
+      - csstype
+      - lodash-unified
+      - vue-component-type-helpers
 
-  '@iw/element-plus-utils@1.0.1(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)(typescript@5.9.3)':
+  '@iw/utils@1.2.0(@vue/shared@3.5.31)(@vueuse/core@13.9.0(vue@3.5.31(typescript@5.9.3)))(csstype@3.2.3)(lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23))(vue-component-type-helpers@3.2.6)(vue@3.5.31(typescript@5.9.3))':
     dependencies:
+      '@vue/shared': 3.5.31
       '@vueuse/core': 13.9.0(vue@3.5.31(typescript@5.9.3))
+      csstype: 3.2.3
       lodash-unified: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)
       vue: 3.5.31(typescript@5.9.3)
-    transitivePeerDependencies:
-      - '@types/lodash-es'
-      - lodash
-      - lodash-es
-      - typescript
+      vue-component-type-helpers: 3.2.6
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -3060,6 +3075,8 @@ snapshots:
       toidentifier: 1.0.1
 
   inherits@2.0.4: {}
+
+  intersecting-polygon-detector@1.0.6: {}
 
   is-reference@3.0.3:
     dependencies:

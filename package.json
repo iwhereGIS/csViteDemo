@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@iw/cesium-ui": "1.4.1",
+    "@iw/cesium-ui": "1.13.1",
     "cesium": "^1.139.1",
     "color": "^5.0.3",
     "element-plus": "^2.13.6",
