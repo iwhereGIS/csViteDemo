@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: app_shell
+title: 应用外壳与示例导航
+scope:
+    - src/App.vue
+    - src/index.vue
+    - src/main.ts
+    - src/style.css
+    - src/examples.ts
+source_files: []
+depends_on: []
+related_to: []

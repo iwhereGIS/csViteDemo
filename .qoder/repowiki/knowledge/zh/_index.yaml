@@ -1,0 +1,42 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-10-14T01:23:52Z"
+modules:
+    "":
+        dir_name: Cesium + Vue 地理可视化示例集
+        title: Cesium + Vue 地理可视化示例集
+        scope:
+            - README.md
+            - index.html
+            - package.json
+            - pnpm-lock.yaml
+            - vite.config.ts
+            - tsconfig.json
+            - tsconfig.app.json
+            - tsconfig.node.json
+            - .gitignore
+            - .npmrc
+            - .gitattributes
+            - auto-imports.d.ts
+            - components.d.ts
+        source_files: []
+        children:
+            - app_shell
+        depends_on: []
+        related_to: []
+    app_shell:
+        dir_name: 应用外壳与示例导航
+        title: 应用外壳与示例导航
+        scope:
+            - src/App.vue
+            - src/index.vue
+            - src/main.ts
+            - src/style.css
+            - src/examples.ts
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

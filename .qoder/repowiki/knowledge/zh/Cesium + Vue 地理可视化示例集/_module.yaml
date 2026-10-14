@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: ""
+title: Cesium + Vue 地理可视化示例集
+scope:
+    - README.md
+    - index.html
+    - package.json
+    - pnpm-lock.yaml
+    - vite.config.ts
+    - tsconfig.json
+    - tsconfig.app.json
+    - tsconfig.node.json
+    - .gitignore
+    - .npmrc
+    - .gitattributes
+    - auto-imports.d.ts
+    - components.d.ts
+source_files: []
+depends_on: []
+related_to: []
