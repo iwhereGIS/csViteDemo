@@ -1,18 +1,10 @@
 ---
 kind: build_system
 name: 基于 Vite + pnpm 的前端构建与打包
+slug: build_system
 category: build_system
 scope:
     - '**'
-source_files:
-    - package.json
-    - vite.config.ts
-    - .npmrc
-    - tsconfig.app.json
-    - tsconfig.node.json
-    - tsconfig.json
-    - auto-imports.d.ts
-    - components.d.ts
 ---
 
 ## 1. 使用的系统/工具

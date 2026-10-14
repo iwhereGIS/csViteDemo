@@ -1,13 +1,10 @@
 ---
 kind: error_handling
 name: 前端示例集的错误处理：极简 UI 占位，无业务错误处理逻辑
+slug: error_handling
 category: error_handling
 scope:
     - '**'
-source_files:
-    - src/components/Ui/AsyncError.vue
-    - src/components/Ui/AsyncLoading.vue
-    - src/main.ts
 ---
 
 ## 1. 使用的系统/方法

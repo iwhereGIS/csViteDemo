@@ -1,13 +1,10 @@
 ---
 kind: dependency_management
 name: pnpm + npm 私有源依赖管理
+slug: dependency_management
 category: dependency_management
 scope:
     - '**'
-source_files:
-    - package.json
-    - .npmrc
-    - pnpm-lock.yaml
 ---
 
 ## 1. 使用的系统/工具

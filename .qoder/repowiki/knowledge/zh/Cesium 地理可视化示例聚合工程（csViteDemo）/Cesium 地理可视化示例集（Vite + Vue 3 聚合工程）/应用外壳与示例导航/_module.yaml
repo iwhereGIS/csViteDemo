@@ -1,5 +1,5 @@
 schema_version: 1
-module_path: app_shell
+module_path: 3021fa50-dfd0-4ffe-800c-20c57247ddf4/fb3d58c6-c72f-4887-a274-70e12c5b7bf4
 title: 应用外壳与示例导航
 scope:
     - src/App.vue

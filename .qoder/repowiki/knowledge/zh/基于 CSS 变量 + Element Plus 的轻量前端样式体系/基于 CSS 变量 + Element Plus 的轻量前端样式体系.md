@@ -1,17 +1,10 @@
 ---
 kind: frontend_style
 name: 基于 CSS 变量 + Element Plus 的轻量前端样式体系
+slug: frontend_style
 category: frontend_style
 scope:
     - '**'
-source_files:
-    - src/style.css
-    - vite.config.ts
-    - package.json
-    - src/components/Ui/AsyncError.vue
-    - src/components/Ui/AsyncLoading.vue
-    - src/index.vue
-    - src/assets/iconfont/demo.css
 ---
 
 ## 1. 使用的系统与工具

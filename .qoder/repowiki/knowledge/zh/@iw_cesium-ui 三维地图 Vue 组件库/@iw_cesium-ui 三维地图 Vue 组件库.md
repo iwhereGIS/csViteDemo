@@ -1,19 +1,10 @@
 ---
 kind: external_dependency
 name: '@iw/cesium-ui 三维地图 Vue 组件库'
-slug: iw-cesium-ui
+slug: iw-cesium-ui-三维地图-vue-组件库
 category: external_dependency
-category_hints:
-    - vendor_identity
-    - sdk_real_api
-    - framework_behavior
 scope:
     - '**'
-source_files:
-    - package.json
-    - .npmrc
-    - pnpm-lock.yaml
-    - src/main.ts
 ---
 
 ### 身份与角色

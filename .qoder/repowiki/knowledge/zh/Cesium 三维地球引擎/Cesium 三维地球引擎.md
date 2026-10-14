@@ -1,14 +1,10 @@
 ---
 kind: external_dependency
 name: Cesium 三维地球引擎
-slug: cesium
+slug: cesium-三维地球引擎
 category: external_dependency
-category_hints:
-    - client_constraint
 scope:
     - '**'
-source_files:
-    - package.json
 ---
 
 ### 身份与角色

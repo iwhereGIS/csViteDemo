@@ -1,17 +1,10 @@
 ---
 kind: configuration_system
 name: 配置系统 — Vite + Vue 示例集的配置组织方式
+slug: configuration_system
 category: configuration_system
 scope:
     - '**'
-source_files:
-    - vite.config.ts
-    - src/main.ts
-    - package.json
-    - .npmrc
-    - tsconfig.json
-    - tsconfig.app.json
-    - tsconfig.node.json
 ---
 
 ## 概览

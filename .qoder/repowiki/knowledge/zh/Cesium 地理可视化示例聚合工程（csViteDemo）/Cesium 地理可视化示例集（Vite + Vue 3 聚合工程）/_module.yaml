@@ -1,6 +1,6 @@
 schema_version: 1
-module_path: ""
-title: Cesium + Vue 地理可视化示例集
+module_path: 3021fa50-dfd0-4ffe-800c-20c57247ddf4
+title: Cesium 地理可视化示例集（Vite + Vue 3 聚合工程）
 scope:
     - README.md
     - index.html
