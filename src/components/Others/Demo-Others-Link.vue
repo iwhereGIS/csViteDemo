@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import { Viewer } from "cesium";
+import { Cartesian3, Viewer } from "cesium";
 
 import { CsViewer, CsLink, type DegreeAry } from "@iw/cesium-ui";
 
@@ -14,6 +14,12 @@ const position = ref<DegreeAry>([110.643227, 32.659204, 100])
 
 function handleReady(viewer: Viewer){
   console.log('viewer ready', viewer)
+
+  // 相机飞至覆盖物位置上空
+  const [lng = 0, lat = 0, h = 0] = position.value
+  viewer.camera.flyTo({
+    destination: Cartesian3.fromDegrees(lng, lat, h + 10000),
+  })
 }
 
 const count = ref(30)

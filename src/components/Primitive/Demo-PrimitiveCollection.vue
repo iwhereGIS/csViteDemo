@@ -22,7 +22,7 @@ const primitiveCollectionRef = useTemplateRef<CsPrimitiveCollectionInstance>('pr
 
 onMounted(() => {
   const { ready } = useCsViewer('x4fs7p7')
-  ready().then(() => {
+  ready().then((viewer: Viewer) => {
       const {pushPrimitive} = useCsPrimitiveCollection(primitiveCollectionRef)
 
       const rectangles = []
@@ -50,6 +50,9 @@ onMounted(() => {
               rectangles
           )
       )
+
+      // 自动定位到矩形范围(camera.flyTo 的 destination 支持 Rectangle)
+      viewer.camera.flyTo({ destination: Rectangle.fromDegrees(110.0, 30.0, 120.0, 40.0) })
   })
 })
 

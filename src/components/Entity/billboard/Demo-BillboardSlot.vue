@@ -13,6 +13,13 @@ function handleReady(viewer: Viewer){
   console.log('viewer ready', viewer)
 }
 
+function handleEntityReady(viewer: Viewer, entity: any){
+  console.log('entity ready', entity)
+
+  // 自动定位到实体位置
+  viewer.flyTo(entity)
+}
+
 
 onMounted(() => {
   console.log('mounted')
@@ -33,7 +40,7 @@ const count = ref(4)
     <div class="hero">
       <cs-viewer @ready="handleReady"> 
         <cs-entity-billboard
-            :position="[110.643227, 32.659204]">
+            :position="[110.643227, 32.659204]" @ready="handleEntityReady">
           <template v-slot:canvas="{setCanvas}">
             <canvas id="slot-canvas" :ref="(el)=>setCanvas(el)" style="display: none"></canvas>
           </template>

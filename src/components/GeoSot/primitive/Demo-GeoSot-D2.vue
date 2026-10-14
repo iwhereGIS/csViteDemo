@@ -98,7 +98,8 @@ watch(gridLineColor, (newVal, oldVal) => {
 
 
 const flagshowFace = ref(true)
-function changeFlagshowGridFace(e) {
+// el-checkbox 的 change 回调:绑定值为 boolean,显式标注避免隐式 any
+function changeFlagshowGridFace(e: boolean) {
   showGrid.value = false
   nextTick(() => {
     console.log(e, 'changeFlagshowGridFace')
@@ -108,7 +109,7 @@ function changeFlagshowGridFace(e) {
 }
 
 const flagShowLine = ref(true)
-function changeFlagShowLine(e) {
+function changeFlagShowLine(e: boolean) {
   showGrid.value = false
   nextTick(() => {
     console.log(e, 'changeFlagShowLine')
@@ -126,7 +127,6 @@ const count = ref(24)
     <div class="hero">
       <cs-viewer @ready="handleReady">
         <CsGeosotPrimitiveD2
-            ref="childRef"
             v-if="showGrid"
             :geonum2ds="gridNums"
             :showFace="flagshowFace"

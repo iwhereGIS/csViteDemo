@@ -24,6 +24,9 @@ function handleEntityReady(viewer: Viewer, entity: Entity){
   console.log('viewer1 ready', viewer)
 
   console.log('entity ready', entity)
+
+  // 自动定位到实体位置
+  viewer.flyTo(entity)
 }
 
 const count = ref(6)

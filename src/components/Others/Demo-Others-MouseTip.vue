@@ -14,7 +14,8 @@ function handleReady(viewer: Viewer){
 }
 
 
-function handleMove(position: []){
+// 1.13.1 的事件名为 move(非 onMove),参数为可选经纬高数组
+function handleMove(position?: [number, number, number]){
   console.log('MouseMove:', position)
 }
 const count = ref(1)
@@ -24,7 +25,7 @@ const count = ref(1)
   <section id="center">
     <div class="hero">
       <cs-viewer @ready="handleReady">
-        <cs-mouse-tip v-slot="{position}" @onMove="handleMove">
+        <cs-mouse-tip v-slot="{position}" @move="handleMove">
           <span style="background: lightblue">{{position ? position[0] + ',' + position[1] : ''}}</span>
         </cs-mouse-tip>
       </cs-viewer>

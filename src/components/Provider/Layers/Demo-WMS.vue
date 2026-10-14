@@ -3,7 +3,8 @@ import { ref } from 'vue'
 
 import {Cartesian3, Viewer} from "cesium";
 
-import {CsViewer, CsMeasureDistance, CsWmsImageryLayer, CsTdtImageryLayer} from "@iw/cesium-ui";
+// CsMeasureDistance / CsTdtImageryLayer 已注释未用,需要时取消注释模板并重新导入(unplugin 自动解析组件名)
+import {CsViewer, CsWmsImageryLayer} from "@iw/cesium-ui";
 
 let $viewer: Viewer
 

@@ -6,8 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
+// defineProps 是 Vue 编译器宏,无需显式 import
 const props = defineProps<{ msg?: string }>()
 </script>
 

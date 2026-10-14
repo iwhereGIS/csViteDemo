@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 import { Viewer } from "cesium";
 
@@ -19,13 +19,10 @@ function handleReady(viewer: Viewer){
   console.log('viewer ready', viewer)
 }
 
-/**
- * 坐标点数组发生变化时触发的事件
- * @param positions
- */
-function handleChange(positions: DegreeAry[]){
-  alert('坐标点数组发生变化:' + positions)
-}
+// 1.13.1 的 CsDrawingWallPolygon 未提供 change 事件,改用 watch 监听 v-model 坐标变化
+watch(positions, (val) => {
+  console.log('坐标点数组发生变化:', val)
+})
 
 const count = ref(23)
 </script>
@@ -36,8 +33,7 @@ const count = ref(23)
         <CsDrawingWallPolygon
             v-model:positions="positions"
             v-model:height="height"
-            v-model:extrudedHeight="extrudeHeight"
-            @change="handleChange"/>
+            v-model:extrudedHeight="extrudeHeight"/>
       </cs-viewer>
     </div>
     <button class="counter" @click="count++">Count is {{ count }}</button>

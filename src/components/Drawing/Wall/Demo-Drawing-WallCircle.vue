@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 import { Viewer } from "cesium";
 
@@ -20,13 +20,10 @@ function handleReady(viewer: Viewer){
 
 // TODO: 绘制完成后，显示的二维的图形，而不是墙
 
-/**
- * 坐标点数组发生变化时触发的事件
- * @param positions
- */
-function handleChange(positions: DegreeAry[]){
-  alert('坐标点数组发生变化:' + positions)
-}
+// 1.13.1 的 CsDrawingWallCircle 未提供 change 事件,改用 watch 监听 v-model 坐标变化
+watch(position, (val) => {
+  console.log('坐标点发生变化:', val)
+})
 
 const count = ref(22)
 </script>
@@ -38,8 +35,7 @@ const count = ref(22)
             v-model:position="position"
             v-model:radius="radius"
             v-model:height="height"
-            v-model:extrudedHeight="extrudeHeight"
-            @change="handleChange"/>
+            v-model:extrudedHeight="extrudeHeight"/>
       </cs-viewer>
     </div>
     <button class="counter" @click="count++">Count is {{ count }}</button>

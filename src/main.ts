@@ -18,6 +18,8 @@ app.use(ElementPlus)
 app.use(CesiumUI,{
     lng: 116.3983552214,
     lat: 39.906463,
+    // 初始视线高度(米):配合 CsViewer 的 initWithGlobalDestination 完成开场定位
+    height: 5_000_000,
     tdtToken: '8ff7fd50649991cdca26d3e60fbbffd5'
 })
 app.mount('#app')
